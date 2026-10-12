@@ -1,0 +1,1 @@
+package com.smartmall.repository; import com.smartmall.entity.Review; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ReviewRepository extends JpaRepository<Review,Long>{List<Review> findByProductIdOrderByIdDesc(Long id); Optional<Review> findByCustomerIdAndProductId(Long c,Long p);}
